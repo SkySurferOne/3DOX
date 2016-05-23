@@ -1,0 +1,11 @@
+{
+  "name": "3DOX",
+  "version": "1.0.0",
+  "description": "3DOX is a tic-tac-toe in 3D, based on three.js and node.js",
+  "main": "server.js",
+  "author": "DH <skysurfer95@interia.pl>",
+  "dependencies": {
+    "socket.io": "~1.3.4",
+    "express": "~4.11.2"
+  }
+}

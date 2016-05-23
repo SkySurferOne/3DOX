@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>3DOX</title>
+		<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+       <link rel="stylesheet" type="text/css" href="stylesheets/gui.css">
+        <script type="text/javascript" src="http://127.0.0.1:8081/socket.io/socket.io.js"></script>
+        <!--<script type="text/javascript" src="http://192.168.0.13:8081/socket.io/socket.io.js"></script>-->
+        <script data-main="js/main" src="js/lib/require.min.js"></script>
+    </head>
+    <body>
+		<div id="ThreeJS"></div>
+        <div id="menu">
+            <div id="main-menu">
+                <input type="button" class="gui-btn" id="new-game" value="New game">
+                <input type="button" class="gui-btn" id="options" value="Options">
+                <input type="button" class="gui-btn" id="about" value="About">
+            </div>
+            <div id="choice-box">
+                <p>Make a choice</p>
+                <input type="button" class="gui-btn" id="o-choice" value="o">
+                <input type="button" class="gui-btn" id="x-choice" value="x">
+            </div>
+            <div class="endInfo-box"> 
+                <p id="endInfo">3DOX</p>
+                <input type="button" class="gui-btn" id="ok-btn" value="ok">
+            </div>
+            <div id="options-box" class="tab">
+                <h2>Options</h2>
+                <ul>
+                    <li>Music: <div class="right"><span id="musicOn" class="switchMusic">on</span>/<span id="musicOff" class="switchMusic">off</span></div></li>
+                    <li>Volume: <input type="range" min="0" max="100" value="50" id="volRange" step="1"></li>
+                    <li>Hide spheres after score: <div class="right"><span id="hideYes" class="switchHide">yes</span>/<span id="hideNo" class="switchHide">no</span></div></li>
+                </ul>
+                <input type="button" class="return-btn" value="return">
+            </div>
+             <div id="about-box" class="tab">
+                <h2>About</h2>
+                 <p>3DOX is a tic-tac-toe in 3D, based on three.js and node.js. To play you have to have a someone who will join to your room.</p>
+                 <p>To play use your mouse. To set a sign on the field click LPM, to move a camera hold LPM and slide. If you want to zoom in or zoom out use a scroll button. Enjoy.</p>
+                <input type="button" class="return-btn" value="return">
+            </div>
+        </div> 
+        <div class="player-info" id="player-info-left">
+            <ul>
+                <li>You</li>
+                <li>name: <span id="yourNick">player1</span></li>
+                <li>score: <span id="yourScore">0</span></li>
+                <li>sign: <span id="yourSign">none</span></li>
+            </ul>
+        </div>
+        <div class="player-info" id="player-info-right">
+             <ul>
+                <li>Opponent</li>
+                <li>name: <spen id="oppNick">player2</span></li>
+                <li>score: <span id="oppScore">0</span></li>
+                <li>sign: <span id="oppSign">none</span></li>
+            </ul>
+        </div>
+    </body>
+</html>
