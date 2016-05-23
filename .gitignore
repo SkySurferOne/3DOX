@@ -1,5 +1,7 @@
-node_modules/
+node_modules/*
 mat.txt
 .brackets.json
 client/.sass-cache/
 npm-debug.log
+!node_modules/threedox/
+!node_modules/threedox/*
